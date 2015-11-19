@@ -1,0 +1,26 @@
+<form role="form">
+  <div class="form-group">
+    <label for="email">Title:</label>
+    <input type="text" class="form-control" id="title" ng-model="vm.story.title">
+  </div>
+  <div class="form-group">
+    <label for="desc">Description:</label>
+    <textarea class="form-control" id="desc" ng-model="vm.story.desc"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="assignee">assignee:</label>
+    <select class="form-control" id="assignee" ng-model="vm.story.assignee">
+      <option value="" slected="selectd">select</option>
+      <option ng-repeat="user in vm.users" value="{{user.name}}">{{user.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="storyPoints">storyPoints:</label>
+    <input type="text" class="form-control" id="storyPoints" ng-model="vm.story.storyPoints" />
+  </div>
+  <div class="form-group">
+    <label for="estimatedHours">estimated Hours:</label>
+    <input type="text" class="form-control" id="estimatedHours" ng-model="vm.story.estimatedHours" />
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="vm.addStory()">ADD</button>
+</form>

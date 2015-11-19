@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="story in vm.stories" ui-sref="story.details({storyId: story.storyId})">
+      <th>{{story.title}}</th>
+      <th>{{story.desc}}</th>
+      <th>{{story.status}}</th>
+    </tr>
+  </tbody>
+</table>

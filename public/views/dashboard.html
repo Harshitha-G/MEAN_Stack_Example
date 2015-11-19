@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-lg-4 text-center well progress-fields">
+		<h2>Open</h2>
+		<div class="row">
+			<div class="col-lg-6" ng-repeat="story in vm.stories | filter: {status: 'open' } ">
+				<story data="story"></story>
+			</div>
+		</div>
+	</diV>
+	<div class="col-lg-4 text-center well progress-fields">
+		<h2>In Progress</h2>
+		<div class="row">
+			<div class="col-lg-6" ng-repeat="story in vm.stories | filter: {status: 'inProgress' }">
+				<story data="story"></story>
+			</div>
+		</div>
+	</diV>
+	<div class="col-lg-4 text-center well progress-fields">
+		<h2>Closed</h2>
+		<div class="row">
+			<div class="col-lg-6" ng-repeat="story in vm.stories | filter: {status: 'closed' }">
+				<story data="story"></story>
+			</div>
+		</div>
+	</diV>
+</div>
