@@ -34,6 +34,8 @@ router.post('/insertStory', function (req, res) {
 		} else {
 			console.log(id);
 			req.body._id = id;
+
+			req.body.status = "open";
 			var newStory = new stories(req.body);
 			newStory.save(function (err, doc) {
 				if (err) {

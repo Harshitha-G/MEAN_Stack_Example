@@ -15,7 +15,6 @@ describe("Story Details Controller", function () {
 			}
 		};
 		var storyDetailsController = $controller("storyDetailsController", {
-			$scope: $scope,
 			storyService: storyService
 		});
 		//no need to call this storyDetailsController.getStory("story-1"); because this is called in controllers init function
@@ -30,7 +29,6 @@ describe("Story Details Controller", function () {
 			}
 		};
 		var storyDetailsController = $controller("storyDetailsController", {
-			$scope: $scope,
 			storyService: storyService
 		});
 		$scope.$apply();

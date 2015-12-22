@@ -1,7 +1,7 @@
 (function() {
 	var app = angular.module("app");
-	function NewStoryController($scope, storyService, userService, $state, $stateParams) {
-		vm = this;
+	function NewStoryController(storyService, userService, $state, $stateParams) {
+		var vm = this;
 		this.story = {
 		    title: "",
 		    desc: "",
@@ -34,6 +34,6 @@
 		};
 		this.init();
 	};
-	NewStoryController.$inject = ['$scope', 'storyService', 'userService', '$state', '$stateParams'];
+	NewStoryController.$inject = ['storyService', 'userService', '$state', '$stateParams'];
 	app.controller('newStoryController', NewStoryController)
 })();

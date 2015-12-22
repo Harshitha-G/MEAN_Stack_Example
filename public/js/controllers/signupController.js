@@ -1,6 +1,6 @@
 (function() {
 	var app = angular.module("app");
-	function SignupController($scope, userService, $state) {
+	function SignupController(userService, $state) {
 		this.user = {
 			email: "",
 			name: "",
@@ -14,6 +14,6 @@
 			});
 		};
 	};
-	SignupController.$inject = ['$scope', 'userService', '$state'];
+	SignupController.$inject = ['userService', '$state'];
 	app.controller('signupController', SignupController)
 })();

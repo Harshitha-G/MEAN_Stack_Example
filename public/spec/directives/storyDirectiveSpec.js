@@ -28,8 +28,9 @@ describe('Unit testing story directive', function() {
     // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
     $scope.$digest();
     // Check that the compiled element contains the templated content
-    //expect(element.find("div[ng-bind='data.title']").text()).toEqual("junit poc");
-    //expect(element.find("div[ng-bind='data.desc']").text()).toEqual("junit poc...");
-    expect(element.html()).toContain("junit poc");
+    //var title = element.find("div[ng-bind='vm.data.title']").text();
+    var title = element[0].querySelector("[ng-bind='vm.data.title']").textContent;
+    var desc = element[0].querySelector("[ng-bind='vm.data.desc']").textContent;
+    expect(desc).toContain("junit poc...");
   });
 });

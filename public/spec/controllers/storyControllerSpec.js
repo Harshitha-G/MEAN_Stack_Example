@@ -28,7 +28,6 @@ describe("Story Controller", function () {
 			}
 		};
 		var storyController = $controller("storyController", {
-			$scope: $scope,
 			storyService: storyService
 		});
 		storyController.getStories();
@@ -43,7 +42,6 @@ describe("Story Controller", function () {
 			}
 		};
 		var storyController = $controller("storyController", {
-			$scope: $scope,
 			storyService: storyService
 		});
 		storyController.getStories();

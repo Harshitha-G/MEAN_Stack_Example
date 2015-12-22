@@ -1,7 +1,7 @@
 (function() {
 	var app = angular.module("app");
-	function StoryDetailsController($scope, storyService, $stateParams) {
-		vm = this;
+	function StoryDetailsController(storyService, $stateParams) {
+		var vm = this;
 		this.getStory = function () {
 			storyService.getStory($stateParams.storyId).then(function (response) {
 				vm.story = response;
@@ -11,6 +11,6 @@
 		};
 		this.getStory($stateParams.storyId);
 	};
-	StoryDetailsController.$inject = ['$scope', 'storyService', '$stateParams'];
+	StoryDetailsController.$inject = ['storyService', '$stateParams'];
 	app.controller('storyDetailsController', StoryDetailsController);
 })();
